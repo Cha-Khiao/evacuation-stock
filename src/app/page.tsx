@@ -14,7 +14,6 @@ export default function LandingPage() {
   return (
     <div className="landing-wrapper d-flex flex-column align-items-center justify-content-center h-100 w-100 position-absolute top-0 start-0 overflow-hidden" style={{ zIndex: 9999 }}>
       
-      {/* 🔴 แสงออร่าพื้นหลัง (ตกแต่งให้ดูมีความเป็นเทคโนโลยี) */}
       <div className="glow-shape shape-primary"></div>
       <div className="glow-shape shape-info"></div>
 
@@ -22,7 +21,6 @@ export default function LandingPage() {
         <div className="row justify-content-center">
           <div className="col-lg-8 col-xl-7">
             
-            {/* โลโก้และชื่อโปรเจกต์ */}
             <div className="mb-5">
               <div className="hero-icon mb-4">📦</div>
               <h1 className="display-4 fw-bold mb-3 text-body-emphasis tracking-tight">
@@ -33,7 +31,6 @@ export default function LandingPage() {
               </p>
             </div>
 
-            {/* ปุ่มเข้าสู่ระบบ / แผงควบคุม */}
             <div className="d-flex flex-column flex-sm-row justify-content-center gap-3">
               {session ? (
                 <Link href="/dashboard" className="btn btn-primary btn-lg px-5 py-3 rounded-pill fw-bold shadow-lg btn-hover-lift">
@@ -54,7 +51,6 @@ export default function LandingPage() {
         &copy; {new Date().getFullYear()} Evacuation Center Management System.
       </div>
 
-      {/* 🔴 CSS ภายในหน้าสำหรับ Animation และความสวยงาม */}
       <style jsx>{`
         .landing-wrapper {
           background-color: var(--bs-body-bg);
