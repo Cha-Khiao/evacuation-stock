@@ -16,14 +16,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={kanit.className}>
         <Providers>
           <div className="d-flex" style={{ minHeight: '100vh', backgroundColor: 'var(--bs-body-bg)' }}>
+            
             <Sidebar />
+
             <div className="flex-grow-1 d-flex flex-column" style={{ minWidth: 0 }}>
+
               <Header />
+              
               <main className="p-3 p-md-4 flex-grow-1">
                 <div className="container-fluid mx-auto">
                   {children}
                 </div>
               </main>
+
             </div>
           </div>
           <Toaster position="top-right" />
