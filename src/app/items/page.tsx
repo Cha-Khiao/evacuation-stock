@@ -22,7 +22,7 @@ export default function ItemsPage() {
 
   const [formData, setFormData] = useState({ name: '', category: 'อาหาร', stockQuantity: '' });
 
-  // 🟢 ส่ง email ไปให้ Backend เพื่อให้ดึงของมาโชว์ตรงกับคลังของตัวเอง
+  
   const fetchItems = async () => {
     if (!session?.user?.email) return;
     try {
@@ -41,7 +41,7 @@ export default function ItemsPage() {
     
     setLoading(true);
     try {
-      // 🟢 ส่ง email ไปด้วย เพื่อให้ระบบรู้ว่าต้องเอาของเข้าคลังไหน
+      
       const payload = { ...formData, stockQuantity: Number(formData.stockQuantity), actionBy: session?.user?.name, email: session?.user?.email };
       const res = await fetch('/api/items', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
       const data = await res.json();
