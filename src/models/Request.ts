@@ -5,7 +5,7 @@ export interface IRequest extends Document {
   items: Array<{ itemId: mongoose.Types.ObjectId; itemName: string; quantity: number }>;
   status: 'PENDING' | 'APPROVED' | 'REJECTED';
   requestedBy: string;
-  actionBy?: string; // ชื่อ Admin ที่กดอนุมัติ/ปฏิเสธ
+  actionBy?: string; 
   note?: string;
   rejectReason?: string;
 }
