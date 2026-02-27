@@ -2,10 +2,10 @@ import mongoose, { Schema, Document } from 'mongoose';
 
 export interface IUser extends Document {
   name: string;
-  email: string; // ใช้เป็น Username ตอนล็อกอิน
+  email: string; 
   password?: string;
-  role: 'ADMIN' | 'STAFF'; // แยกสิทธิ์ ศูนย์ใหญ่ vs ศูนย์ย่อย
-  shelterId?: mongoose.Types.ObjectId; // ถ้าเป็น STAFF ต้องระบุว่าอยู่ศูนย์อพยพไหน
+  role: 'ADMIN' | 'STAFF'; 
+  shelterId?: mongoose.Types.ObjectId; 
 }
 
 const UserSchema: Schema = new Schema({
