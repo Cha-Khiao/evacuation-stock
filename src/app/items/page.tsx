@@ -85,7 +85,7 @@ export default function ItemsPage() {
           const qty = Number(String(row[qtyColIdx] || 0).replace(/,/g, ''));
           if (isNaN(qty) || qty <= 0) continue;
           const category = catColIdx !== -1 ? String(row[catColIdx] || '').trim() : 'ระบุภายหลัง';
-          // 🟢 แนบ email เข้าไปในทุกๆ แถวของ Excel
+          
           uploadData.push({ name: itemName, category: category || 'ระบุภายหลัง', stockQuantity: qty, actionBy: session?.user?.name, email: session?.user?.email });
         }
 
