@@ -28,7 +28,7 @@ export default function LoginPage() {
       setLoading(false);
     } else {
       toast.success('เข้าสู่ระบบสำเร็จ!');
-      // 🟢 แก้ไขตรงนี้: ล็อกอินผ่านแล้วให้เด้งไปหน้า Dashboard 
+      
       router.push('/dashboard'); 
       router.refresh(); 
     }
