@@ -14,7 +14,7 @@ const ItemSchema: Schema = new Schema({
   shelterId: { type: Schema.Types.ObjectId, ref: 'Shelter', default: null } // ถ้าเป็น null = คลังส่วนกลาง
 }, { timestamps: true });
 
-// 🟢 บังคับล้าง Cache โมเดลเดิมทิ้ง ป้องกัน Error
+
 if (mongoose.models.Item) {
   delete mongoose.models.Item;
 }
