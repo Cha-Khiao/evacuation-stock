@@ -67,7 +67,7 @@ export default function SheltersPage() {
     });
   };
 
-  // 🟢 ฟังก์ชันส่งออกศูนย์อพยพเป็น Excel
+  
   const handleExportExcel = () => {
     if (shelters.length === 0) return toast.error('ไม่มีข้อมูลให้ส่งออก');
     const exportData = shelters.map((s, index) => ({
